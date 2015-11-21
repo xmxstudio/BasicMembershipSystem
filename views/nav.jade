@@ -1,0 +1,16 @@
+block nav
+	nav
+		ul
+			li
+				a(href="/") Home
+			-if(user == undefined){
+				li
+					a(href="/login") Login
+				li
+					a(href="/register") Register
+			-}else{
+				li
+					a(href="/account") Account
+				li
+					a(href="/logout") Logout
+			-}

@@ -1,0 +1,12 @@
+extends layout
+block content
+
+	h1 #{user.username}'s Account
+
+	.details Your account details are as follows:
+		.id ID: #{user._id}
+		.username username: #{user.username}
+		.password password: #{user.password}
+		.email email: #{user.email}
+		.verified verified: #{user.verified}
+//- {"_id":"5650088ded7d5bd5781d1dad","username":"xmetrix","password":"x","email":"xmetrix@gmail.com","verified":"1"}

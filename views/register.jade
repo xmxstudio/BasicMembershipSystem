@@ -1,0 +1,14 @@
+extends layout
+block content
+	h1 Register
+
+	form(action="/register" method="POST")
+		.errormsg #{errormessage}
+		label(for="username") Username:
+		input(type="text" name="username")
+		label(for="password") Password:
+		input(type="password" name="password")
+		label(for="email") Email:
+		input(type="email" name="email")
+		input(type="submit" name="register" value="register") 
+		

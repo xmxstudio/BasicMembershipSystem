@@ -1,0 +1,11 @@
+extends layout
+block content
+	h1 Login
+	form(action="/login" method="POST")
+		.errormsg #{errormessage}
+		label(for="username") Username:
+		input(type="text" name="username" value="xmetrix")
+		label(for="password") Password:
+		input(type="password" name="password" value="x")
+		input(type="submit" name="login" value="login")
+		a(href="/forgotpassword") Forgot Password

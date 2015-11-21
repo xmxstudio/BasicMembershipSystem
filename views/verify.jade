@@ -1,0 +1,14 @@
+extends layout
+block content
+	h1 Verify your email address
+	-if(verified){
+		p Thanks, your email address has been verificatedlyness and u r teh kewl gai!.login now!
+	-}else{
+		form(action="/verify" method="POST")
+			.errormsg #{errormessage}
+			.msg #{message}
+
+			label(for="validationcode") Validation code:
+			input(type="text" name="validationcode")
+			input(type="submit" name="validateEmailNow" value="Validate Email Now")
+	-}
