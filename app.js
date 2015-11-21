@@ -6,7 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var mongoose  = require('mongoose');
+var credentials = require('credentials');
+
+// LOCAL mongo 
 mongoose.connect("mongodb://localhost/bms");
+//REMOTE mongo
+//var remoteMongoConnectionString =  "mongodb://" + credentials.mongo.user + ":" + credentials.mongo.pass + "@ds049104.mongolab.com:49104/" + credentials.mongo.db
+//mongoose.connect(remoteMongoConnectionString);
 
 var routes = require('./routes/index');
 
